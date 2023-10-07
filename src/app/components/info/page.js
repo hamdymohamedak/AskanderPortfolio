@@ -12,7 +12,7 @@ function info() {
             <p>I have a strong background in computer science and engineering, and I have a passion for building beautiful and functional websites and applications.</p>
         </div>
         <div className={styles.imgParent}>
-            <Image loading="lazy" src={MyLogo}/>
+            <Image loading="lazy" src={MyLogo} alt="Logo"/>
         </div>
     </section>
   )

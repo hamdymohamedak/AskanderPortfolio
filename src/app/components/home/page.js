@@ -1,19 +1,38 @@
 "use client";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./home.module.css";
-const Cards = lazy(() => import("../cards/page"));
-const Button = lazy(() => import("../btn/btn"));
 import HomeImg from "../../LogoWithoutBg.svg";
 import Link from "next/link";
 
-let handleClickAtBtnContact = () => {
-  window.open("https://www.facebook.com/hamdy.elgokar.5");
-};
+const Cards = lazy(() => import("../cards/page"));
+const Button = lazy(() => import("../btn/btn"));
 
 function Home() {
+  const [toTopBtnStyle, setToTopBtnStyle] = useState({ display: "none" });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setToTopBtnStyle({ display: "block" });
+      } else {
+        setToTopBtnStyle({ display: "none" });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollZero = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading...</div>} key="home-suspense">
       <section className={styles.homeSec}>
         <div className={styles.centerLine}></div>
 
@@ -38,7 +57,7 @@ function Home() {
           />
 
           <div>
-            <Button onClick={handleClickAtBtnContact} title="Contact" />
+            <Button title="Contact" social="https://www.facebook.com/hamdy.elgokar.5"/>
           </div>
         </div>
 
@@ -49,7 +68,17 @@ function Home() {
           <span>r</span>
         </div>
       </section>
-      <marquee style={{ fontWeight: "bold" }}>Support Palestine🇵🇸💙</marquee>
+      <marquee style={{ fontWeight: "bold" }}>
+        Askander supports Palestine🇵🇸💙
+      </marquee>
+      {/* Button to scroll to the top */}
+      <button
+        onClick={scrollZero}
+        style={toTopBtnStyle}
+        className={styles.toTopBtn}
+      >
+        🡅
+      </button>
     </Suspense>
   );
 }

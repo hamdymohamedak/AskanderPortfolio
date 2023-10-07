@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./About.module.css";
 import { lazy } from "react";
 // Sample data for the cards
-const Button  = lazy(()=> import("../btn/btn") )
-const Card  = lazy(()=>import("../cards/page"))
+const Button = lazy(() => import("../btn/btn"));
+const Card = lazy(() => import("../cards/page"));
 const cardData = [
   {
     title: "HTML",
@@ -36,17 +36,18 @@ const cardData = [
   {
     title: "Next.js",
     info: "Next.js, built on React, simplifies web app development with server-side rendering, automatic code splitting, and routing, enhancing performance and SEO friendliness, making it a favored choice for modern web applications.",
-  },{
+  },
+  {
     title: "React Native",
     info: "React Native simplifies cross-platform mobile app development using JavaScript and React.",
-  }
+  },
 ];
 
 function Btn() {
   return (
     <section className={styles.sec}>
       <div className={styles.btnParent}>
-        <Button title="About" /> 
+        <Button title="About" social="#"/>
       </div>
       <div className={styles.cardsListParent}>
         {cardData.map((card, index) => (

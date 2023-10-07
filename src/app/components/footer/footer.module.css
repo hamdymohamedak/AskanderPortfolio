@@ -1,0 +1,19 @@
+.footer{
+  position: relative;
+  background-image: linear-gradient(
+    to left bottom,
+    #02047a,
+    #000001,
+    #000001 0,
+    #000001 -11%,
+    #02047a
+  );
+  margin-top: 2rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 0;
+}
