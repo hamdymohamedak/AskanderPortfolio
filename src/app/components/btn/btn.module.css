@@ -1,0 +1,84 @@
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid #007bff;
+  color: white;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.btn:hover {
+  box-shadow: 0rem 0rem 1rem 0rem #007bff;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -13%;
+  left: 9%;
+  background: transparent;
+  border: 2px solid #007bff;
+  height: 0.5rem;
+  width: 1rem;
+}
+.btn:hover::before {
+  animation: moveing 1s infinite;
+}
+@keyframes moveing {
+  0%,
+  100% {
+    left: 9%;
+  }
+  50% {
+    left: 45%;
+    box-shadow: 0rem 0rem 1rem 0rem #007bff;
+  }
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  bottom: -13%;
+  right: 9%;
+  background: transparent;
+  border: 2px solid #007bff;
+  height: 0.5rem;
+  width: 1rem;
+}
+.btn:hover::after {
+  animation: moveing2 1s infinite;
+}
+@keyframes moveing2 {
+  0%,
+  100% {
+    right: 9%;
+  }
+  50% {
+    right: 45%;
+    box-shadow: 0rem 0rem 1rem 0rem #007bff;
+  }
+}
+
+@media (max-width: 425px) {
+  .html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .html {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .html {
+    font-size: 16px;
+  }
+}
+

@@ -1,0 +1,107 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 9%;
+  gap: 10rem;
+  z-index: 999;
+}
+.navbar :nth-child(n) {
+  list-style: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+.listParent :nth-child(n) {
+  height: 1.5rem;
+  width: 1.5rem;
+  background: no-repeat;
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 1px,
+      #0a2746 4px,
+      #007bff 4px,
+      transparent 4px
+    ),
+    linear-gradient(to right, #007bff, #007bff),
+    radial-gradient(
+      circle at 0 100%,
+      transparent 1px,
+      #0a2746 1px,
+      #007bff 4px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #0a2746, #0a2746),
+    radial-gradient(
+      circle at 0 0,
+      transparent 1px,
+      #007bff 1px,
+      #0a2746 4px,
+      transparent 4px
+    ),
+    linear-gradient(to left, #007bff, #007bff),
+    radial-gradient(
+      circle at 100% 0,
+      transparent 1px,
+      #0a2746 1px,
+      #0a2746 4px,
+      transparent 4px
+    ),
+    linear-gradient(to top, #0a2746, #0a2746);
+  background-position: top left, top center, top right, center right,
+    bottom right, bottom center, bottom left, center left;
+  background-size: 4px 4px, calc(100% - (2 * 4px)) 3px, 4px 4px,
+    3px calc(100% - (2 * 4px));
+  border: none;
+  overflow: hidden;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15%;
+  rotate: 0;
+}
+.listParent :nth-child(n):hover {
+  cursor: pointer;
+  rotate: -50deg;
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 1px,
+      #007bff 1px,
+      #007bff 4px,
+      transparent 4px
+    ),
+    linear-gradient(to right, #007bff, #007bff),
+    radial-gradient(
+      circle at 0 100%,
+      transparent 1px,
+      #007bff 1px,
+      #007bff 4px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #007bff, #007bff),
+    radial-gradient(
+      circle at 0 0,
+      transparent 1px,
+      #007bff 1px,
+      #007bff 4px,
+      transparent 4px
+    ),
+    linear-gradient(to left, #007bff, #007bff),
+    radial-gradient(
+      circle at 100% 0,
+      transparent 1px,
+      transparent 1px,
+      transparent 4px,
+      transparent 4px
+    ),
+    linear-gradient(to top, transparent, transparent);
+  background-position: top left, top center, top right, center right,
+    bottom right, bottom center, bottom left, center left;
+  background-size: 4px 4px, calc(100% - (2 * 4px)) 3px, 4px 4px,
+    3px calc(100% - (2 * 4px));
+}
