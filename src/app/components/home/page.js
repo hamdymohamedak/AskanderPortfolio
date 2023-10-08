@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import HomeImg from "../../LogoWithoutBg.svg";
 import Link from "next/link";
-
+import Head from "next/head";
 const Cards = lazy(() => import("../cards/page"));
 const Button = lazy(() => import("../btn/btn"));
 
@@ -33,6 +33,53 @@ function Home() {
 
   return (
     <Suspense fallback={<div>Loading...</div>} key="home-suspense">
+      <Head>
+        <meta
+          property="og:title"
+          content="Askander - Front End Developer | Next.js | React Native"
+        />
+        <meta
+          property="og:description"
+          content="I'm Askander, a Front End Developer specializing in Next.js and React Native for mobile. Discover my work and expertise."
+        />
+        <meta
+          property="og:image"
+          content="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/384550840_881373160178410_1443430486526755727_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=0vP6_Y9LJdgAX8sWIof&_nc_ht=scontent.fcai19-8.fna&oh=00_AfCcrOcEcJwWHJZGZE6akmNHsQ5GeV0pgmlygfSi9k15oQ&oe=6527E27A"
+        />
+        <meta property="og:url" content="https://askander.vercel.app/" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:title"
+          content="Askander - Front End Developer | Next.js | React Native"
+        />
+        <meta
+          name="twitter:description"
+          content="I'm Askander, a Front End Developer specializing in Next.js and React Native for mobile. Discover my work and expertise."
+        />
+        <meta
+          name="twitter:image"
+          content="https://twitter.com/HamdyMohamedd1"
+        />
+
+        <meta property="og:title" content="Hamdy Mohamed Askander" />
+        <meta
+          property="og:description"
+          content="Learn more about me and my work as a Front End Developer specializing in Next.js and React Native for mobile."
+        />
+        <meta
+          property="og:image"
+          content="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/384550840_881373160178410_1443430486526755727_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=0vP6_Y9LJdgAX8sWIof&_nc_ht=scontent.fcai19-8.fna&oh=00_AfCcrOcEcJwWHJZGZE6akmNHsQ5GeV0pgmlygfSi9k15oQ&oe=6527E27A"
+        />
+        <meta
+          property="og:url"
+          content="https://www.facebook.com/hamdy.elgokar.5"
+        />
+
+        <link rel="canonical" href="https://askander.vercel.app/" />
+      </Head>
+
       <section className={styles.homeSec}>
         <div className={styles.centerLine}></div>
 
@@ -57,7 +104,10 @@ function Home() {
           />
 
           <div>
-            <Button title="Contact" social="https://www.facebook.com/hamdy.elgokar.5"/>
+            <Button
+              title="Contact"
+              social="https://www.facebook.com/hamdy.elgokar.5"
+            />
           </div>
         </div>
 
