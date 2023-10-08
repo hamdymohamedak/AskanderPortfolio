@@ -78,7 +78,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 549px) {
   .html {
     font-size: 10px;
   }
@@ -90,7 +90,7 @@
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 550px) and (max-width: 768px) {
   .html {
     font-size: 13px;
   }

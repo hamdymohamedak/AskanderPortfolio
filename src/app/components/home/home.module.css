@@ -127,8 +127,8 @@
 
 .toTopBtn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 10%;
+  right: 10%;
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
