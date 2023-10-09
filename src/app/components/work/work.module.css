@@ -1,5 +1,9 @@
+
+
 .sec {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 2rem auto 2rem auto;
   grid-template-columns: auto auto auto;
   place-content: center;
   gap: 2rem;
@@ -7,6 +11,8 @@
 .card {
   width: 19.875rem;
   min-height: 20.875rem;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   position: relative;
   cursor: pointer;
@@ -18,7 +24,8 @@
   height: 90%;
   width: 90%;
   z-index: 500;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 1rem;
   border-radius: 20px;
 }
@@ -26,17 +33,21 @@
   min-width: 16rem;
   min-height: 22rem;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 8px;
 }
 .card:hover {
-  transform: scale(1.04) rotate(1deg);
+  -webkit-transform: scale(1.04) rotate(1deg);
+      -ms-transform: scale(1.04) rotate(1deg);
+          transform: scale(1.04) rotate(1deg);
 }
 .circle {
   width: 100px;
   height: 100px;
+  background: -o-radial-gradient(#007bff, #007bff);
   background: radial-gradient(#007bff, #007bff);
   border-radius: 50%;
   position: absolute;
@@ -49,16 +60,31 @@
 .circle:nth-child(2) {
   bottom: -25px;
   right: -25px;
-  animation-name: move-down1;
+  -webkit-animation-name: move-down1;
+          animation-name: move-down1;
+}
+@-webkit-keyframes move-up6 {
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
 }
 @keyframes move-up6 {
   to {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@-webkit-keyframes move-down1 {
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 @keyframes move-down1 {
   to {
-    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
@@ -73,7 +99,8 @@
   font-weight: bold;
 }
 .Dbtn:hover {
-  box-shadow: 1px 10px 11px 9px #007bff;
+  -webkit-box-shadow: 1px 10px 11px 9px #007bff;
+          box-shadow: 1px 10px 11px 9px #007bff;
   width: 6rem;
   cursor: pointer;
 }
@@ -83,7 +110,9 @@
     font-size: 10px;
   }
   .sec {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto;
     grid-template-columns: auto;
     place-content: center;
     gap: 2rem;
@@ -95,7 +124,9 @@
     font-size: 13px;
   }
   .sec {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: auto 2rem auto;
     grid-template-columns: auto auto;
     place-content: center;
     gap: 2rem;

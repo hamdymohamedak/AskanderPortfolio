@@ -5,13 +5,17 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
   outline: 0;
+  scroll-behavior: smooth;
 }
 body {
   background: #000;
-  color: #fff;
+  color: #ffffff;
 }
 section {
   min-height: 100vh;

@@ -1,3 +1,4 @@
+
 .btn {
   padding: 10px 20px;
   border: none;
@@ -15,7 +16,8 @@
   font-weight: bold;
 }
 .btn:hover {
-  box-shadow: 0rem 0rem 1rem 0rem #007bff;
+  -webkit-box-shadow: 0rem 0rem 1rem 0rem #007bff;
+          box-shadow: 0rem 0rem 1rem 0rem #007bff;
 }
 .btn::before {
   content: "";
@@ -28,7 +30,19 @@
   width: 1rem;
 }
 .btn:hover::before {
-  animation: moveing 1s infinite;
+  -webkit-animation: moveing 1s infinite;
+          animation: moveing 1s infinite;
+}
+@-webkit-keyframes moveing {
+  0%,
+  100% {
+    left: 9%;
+  }
+  50% {
+    left: 45%;
+    -webkit-box-shadow: 0rem 0rem 1rem 0rem #007bff;
+            box-shadow: 0rem 0rem 1rem 0rem #007bff;
+  }
 }
 @keyframes moveing {
   0%,
@@ -37,7 +51,8 @@
   }
   50% {
     left: 45%;
-    box-shadow: 0rem 0rem 1rem 0rem #007bff;
+    -webkit-box-shadow: 0rem 0rem 1rem 0rem #007bff;
+            box-shadow: 0rem 0rem 1rem 0rem #007bff;
   }
 }
 .btn::after {
@@ -51,7 +66,19 @@
   width: 1rem;
 }
 .btn:hover::after {
-  animation: moveing2 1s infinite;
+  -webkit-animation: moveing2 1s infinite;
+          animation: moveing2 1s infinite;
+}
+@-webkit-keyframes moveing2 {
+  0%,
+  100% {
+    right: 9%;
+  }
+  50% {
+    right: 45%;
+    -webkit-box-shadow: 0rem 0rem 1rem 0rem #007bff;
+            box-shadow: 0rem 0rem 1rem 0rem #007bff;
+  }
 }
 @keyframes moveing2 {
   0%,
@@ -60,7 +87,8 @@
   }
   50% {
     right: 45%;
-    box-shadow: 0rem 0rem 1rem 0rem #007bff;
+    -webkit-box-shadow: 0rem 0rem 1rem 0rem #007bff;
+            box-shadow: 0rem 0rem 1rem 0rem #007bff;
   }
 }
 
@@ -81,4 +109,3 @@
     font-size: 16px;
   }
 }
-

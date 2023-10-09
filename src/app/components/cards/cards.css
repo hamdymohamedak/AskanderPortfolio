@@ -1,40 +1,62 @@
+
+
 .bottom,
 .glass {
   position: absolute;
 }
 .card,
 .glass {
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .parent {
   width: 290px;
   height: 300px;
-  perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 .card {
   min-height: 114%;
   border-radius: 50px;
+  background: -o-linear-gradient(315deg, #007bff 0, #007bff 100%);
   background: linear-gradient(135deg, #007bff 0, #007bff 100%);
-  box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px,
+  -webkit-box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px,
+    rgba(5, 71, 17, 0.2) 0 25px 25px -5px;
+          box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px,
     rgba(5, 71, 17, 0.2) 0 25px 25px -5px;
   gap: 2rem;
 }
 .glass {
   inset: 8px;
   border-radius: 55px 100% 55px 55px;
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    color-stop(0, rgba(255, 255, 255, 0.349)),
+    to(rgba(255, 255, 255, 0.815))
+  );
+  background: -o-linear-gradient(
+    bottom,
+    rgba(255, 255, 255, 0.349) 0,
+    rgba(255, 255, 255, 0.815) 100%
+  );
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.349) 0,
     rgba(255, 255, 255, 0.815) 100%
   );
-  transform: translate3d(0, 0, 25px);
+  -webkit-transform: translate3d(0, 0, 25px);
+          transform: translate3d(0, 0, 25px);
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
 .content {
   padding: 100px 60px 0 30px;
-  transform: translate3d(0, 0, 26px);
+  -webkit-transform: translate3d(0, 0, 26px);
+          transform: translate3d(0, 0, 26px);
 }
 .content .title {
   display: block;
@@ -50,14 +72,22 @@
 }
 .bottom {
   padding: 10px 12px;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   bottom: 20px;
   left: 20px;
   right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transform: translate3d(0, 0, 26px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translate3d(0, 0, 26px);
+          transform: translate3d(0, 0, 26px);
 }
 .logo,
 .logo .circle {
@@ -66,14 +96,23 @@
   right: 0;
 }
 .bottom .view-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40%;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 .bottom .view-more:hover {
-  transform: translate3d(0, 0, 10px);
+  -webkit-transform: translate3d(0, 0, 10px);
+          transform: translate3d(0, 0, 10px);
 }
 .bottom .view-more .view-more-button {
   background: 0 0;
@@ -89,9 +128,12 @@
   max-height: 15px;
 }
 .bottom .social-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .bottom .social-buttons-container .social-button {
   width: 30px;
@@ -100,18 +142,32 @@
   background: #fff;
   border-radius: 50%;
   border: none;
+  display: -ms-grid;
   display: grid;
   place-content: center;
-  box-shadow: #007bff;
+  -webkit-box-shadow: #007bff;
+          box-shadow: #007bff;
 }
 .bottom .social-buttons-container .social-button:first-child {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0.4s, -webkit-box-shadow 0.2s ease-in-out 0.4s;
+  transition: -webkit-transform 0.2s ease-in-out 0.4s, -webkit-box-shadow 0.2s ease-in-out 0.4s;
+  -o-transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
   transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+  transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s, -webkit-transform 0.2s ease-in-out 0.4s, -webkit-box-shadow 0.2s ease-in-out 0.4s;
 }
 .bottom .social-buttons-container .social-button:nth-child(2) {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0.6s, -webkit-box-shadow 0.2s ease-in-out 0.6s;
+  transition: -webkit-transform 0.2s ease-in-out 0.6s, -webkit-box-shadow 0.2s ease-in-out 0.6s;
+  -o-transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
   transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+  transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s, -webkit-transform 0.2s ease-in-out 0.6s, -webkit-box-shadow 0.2s ease-in-out 0.6s;
 }
 .bottom .social-buttons-container .social-button:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0.8s, -webkit-box-shadow 0.2s ease-in-out 0.8s;
+  transition: -webkit-transform 0.2s ease-in-out 0.8s, -webkit-box-shadow 0.2s ease-in-out 0.8s;
+  -o-transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
   transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+  transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s, -webkit-transform 0.2s ease-in-out 0.8s, -webkit-box-shadow 0.2s ease-in-out 0.8s;
 }
 .bottom .social-buttons-container .social-button .svg {
   width: 15px;
@@ -130,58 +186,76 @@
   fill: black;
 }
 .logo {
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 .logo .circle {
   display: block;
   aspect-ratio: 1;
   border-radius: 50%;
-  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0;
+          box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background: rgba(0, 249, 203, 0.2);
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 .logo .circle1 {
   width: 170px;
-  transform: translate3d(0, 0, 20px);
+  -webkit-transform: translate3d(0, 0, 20px);
+          transform: translate3d(0, 0, 20px);
   top: 8px;
   right: 8px;
 }
 .logo .circle2 {
   width: 140px;
-  transform: translate3d(0, 0, 40px);
+  -webkit-transform: translate3d(0, 0, 40px);
+          transform: translate3d(0, 0, 40px);
   top: 10px;
   right: 10px;
   -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
-  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+       -o-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 .logo .circle3,
 .parent:hover .card .logo .circle2 {
-  transform: translate3d(0, 0, 60px);
+  -webkit-transform: translate3d(0, 0, 60px);
+          transform: translate3d(0, 0, 60px);
 }
 .logo .circle3 {
   width: 110px;
   top: 17px;
   right: 17px;
-  transition-delay: 0.8s;
+  -webkit-transition-delay: 0.8s;
+       -o-transition-delay: 0.8s;
+          transition-delay: 0.8s;
 }
 .logo .circle4 {
   width: 80px;
-  transform: translate3d(0, 0, 80px);
+  -webkit-transform: translate3d(0, 0, 80px);
+          transform: translate3d(0, 0, 80px);
   top: 23px;
   right: 23px;
-  transition-delay: 1.2s;
+  -webkit-transition-delay: 1.2s;
+       -o-transition-delay: 1.2s;
+          transition-delay: 1.2s;
 }
 .logo .circle5 {
   width: 50px;
-  transform: translate3d(0, 0, 100px);
+  -webkit-transform: translate3d(0, 0, 100px);
+          transform: translate3d(0, 0, 100px);
   top: 30px;
   right: 30px;
+  display: -ms-grid;
   display: grid;
   place-content: center;
-  transition-delay: 1.6s;
+  -webkit-transition-delay: 1.6s;
+       -o-transition-delay: 1.6s;
+          transition-delay: 1.6s;
 }
 .logo .circle5 .svg {
   width: 121px;
@@ -189,20 +263,28 @@
   height: 50px;
 }
 .parent:hover .card {
-  transform: rotate3d(1, 1, 0, 30deg);
-  box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px,
+  -webkit-transform: rotate3d(1, 1, 0, 30deg);
+          transform: rotate3d(1, 1, 0, 30deg);
+  -webkit-box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px,
+    rgba(5, 71, 17, 0.1) 0 25px 30px 0;
+          box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px,
     rgba(5, 71, 17, 0.1) 0 25px 30px 0;
 }
 .parent:hover .card .bottom .social-buttons-container .social-button {
-  transform: translate3d(0, 0, 50px);
-  box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0;
+  -webkit-transform: translate3d(0, 0, 50px);
+          transform: translate3d(0, 0, 50px);
+  -webkit-box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0;
+          box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0;
 }
 .parent:hover .card .logo .circle3 {
-  transform: translate3d(0, 0, 80px);
+  -webkit-transform: translate3d(0, 0, 80px);
+          transform: translate3d(0, 0, 80px);
 }
 .parent:hover .card .logo .circle4 {
-  transform: translate3d(0, 0, 100px);
+  -webkit-transform: translate3d(0, 0, 100px);
+          transform: translate3d(0, 0, 100px);
 }
 .parent:hover .card .logo .circle5 {
-  transform: translate3d(0, 0, 120px);
+  -webkit-transform: translate3d(0, 0, 120px);
+          transform: translate3d(0, 0, 120px);
 }

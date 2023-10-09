@@ -46,14 +46,14 @@ const cardData = [
 function Btn() {
   return (
     <section className={styles.sec}>
-      <div className={styles.btnParent}>
+      <h1 className={styles.btnParent}>
         <Button title="About" social="#"/>
-      </div>
-      <div className={styles.cardsListParent}>
+      </h1>
+      <h2 className={styles.cardsListParent}>
         {cardData.map((card, index) => (
           <Card key={index} title={card.title} info={card.info} />
         ))}
-      </div>
+      </h2>
     </section>
   );
 }
