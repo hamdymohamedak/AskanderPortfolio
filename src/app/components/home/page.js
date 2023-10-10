@@ -27,12 +27,15 @@ function Home() {
     };
   }, []);
 
+
   const scrollZero = () => {
     window.scrollTo(0, 0);
   };
-
   return (
-    <Suspense fallback={<div>Loading...</div>} key="home-suspense">
+    <Suspense
+      fallback={<div className={styles.loading}></div>}
+      key="home-suspense"
+    >
       <section className={styles.homeSec}>
         <h1 className={styles.centerLine}></h1>
 
@@ -79,10 +82,7 @@ function Home() {
         style={toTopBtnStyle}
         className={styles.toTopBtn}
         aria-label="Scroll to Top"
-      >
-
-      </button>
-      
+      ></button>
     </Suspense>
   );
 }
