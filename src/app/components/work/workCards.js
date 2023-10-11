@@ -8,12 +8,12 @@ function workCards(props) {
   let month = date.getMonth() + 1;
   return (
     <div className={styles.card}>
-      <img style={{ borderRadius: "20%" }} src={props.imgLink} alt="logo" />
+      <img className={styles.mobile} style={{ borderRadius: "20%" }} src={props.imgLink} alt="logo" />
       <div className={styles.circle}></div>
       <div className={styles.circle}></div>
       <div className={styles.card_inner}>
         <div style={{ textAlign: "end" }}>
-          {day}/{month}/{year}
+          {props.title}
         </div>
       </div>
       <button

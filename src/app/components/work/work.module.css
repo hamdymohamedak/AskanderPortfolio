@@ -5,6 +5,7 @@
   grid-template-columns: auto auto auto;
   place-content: center;
   gap: 2rem;
+  font-weight: bold;
 }
 .card {
   width: 19.875rem;
@@ -145,4 +146,10 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.mobile:hover {
+  border-radius: 20%;
+  rotate: -26deg;
+  transform: rotateZ(7deg);
 }
