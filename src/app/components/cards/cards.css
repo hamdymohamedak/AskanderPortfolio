@@ -71,7 +71,6 @@
   margin-top: 20px;
 }
 .bottom {
-  padding: 10px 12px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   bottom: 20px;
@@ -288,3 +287,6 @@
   -webkit-transform: translate3d(0, 0, 120px);
           transform: translate3d(0, 0, 120px);
 }
+
+
+

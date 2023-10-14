@@ -22,6 +22,9 @@ let Work = dynamic(() => import("./components/work/page"), {
 let Footer = dynamic(() => import("./components/footer/page"), {
   ssr: true,
 });
+let Contact = dynamic(() => import("./components/Contact/page"), {
+  ssr: true,
+});
 
 let Loading = dynamic(() => import("./loading/loading"), {
   ssr: true,
@@ -47,6 +50,9 @@ export default function Home() {
       </Suspense>
       <Suspense fallback={<Loading />}>
         <Work />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Contact />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <Footer />
