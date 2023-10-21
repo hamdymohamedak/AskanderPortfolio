@@ -1,14 +1,13 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import Button from "../btn/btn";
-
 function Page() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [textEmail, setTextEmail] = useState("");
   const [textMessage, setTextMessage] = useState("");
-  const [all, setAll] = useState("");
+  const [tele, setTele] = useState("");
 
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
@@ -26,18 +25,18 @@ function Page() {
     setTextMessage(e.target.value);
   };
 
-  const handleAll = () => {
-    const url = `https://wa.me/+201278859768?text=Name:${firstName} ${lastName}%0AEmail:${textEmail}%0AMessage:${textMessage}`;
-    setAll(url);
-  };
+  const isAnyInputEmpty =
+    !firstName.trim() || !lastName.trim() || !textEmail.trim() || !textMessage.trim();
 
-  const isAnyInputEmpty = !firstName || !lastName || !textEmail || !textMessage;
-
-  const handleGoClick = () => {
+  const handleTeleClick = () => {
     if (isAnyInputEmpty) {
       alert("Inputs are empty");
     } else {
-      handleAll();
+      const url = `
+      https://api.telegram.org/bot5951822431:AAEFoaPj1Ayy1AbZUET0Kbr_HML6HWu-WuY/sendMessage?chat_id=5113505799&text=Name:${firstName} ${lastName}%0AEmail:${textEmail}%0AMessage:${textMessage}
+      `;
+      setTele(url);
+      alert("Successfully");
     }
   };
 
@@ -59,12 +58,13 @@ function Page() {
         />
       </form>
       <a
+        onClick={handleTeleClick}
         className={styles.formBtn}
-        href={isAnyInputEmpty ? "#" : all}
-        onClick={handleGoClick}
+        href={tele}
+        target="_blank"
         style={{ pointerEvents: isAnyInputEmpty ? "none" : "auto" }}
       >
-        {isAnyInputEmpty === "" ? "" : "Go"}
+        {isAnyInputEmpty ? "The form is empty" : "Send "}
       </a>
     </section>
   );

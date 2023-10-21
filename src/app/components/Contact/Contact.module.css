@@ -45,11 +45,14 @@
   align-items: center;
   border-radius: 10px;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   box-shadow: 1px 1px 5px 0px #007bff;
+  cursor: pointer;
+  outline: 3px solid #007bff;
 }
 .formBtn:hover {
   box-shadow: 1px 1px 15px 0px #007bff;
+  outline-offset: 7px;
 }
 
 @media (max-width: 425px) {
