@@ -7,7 +7,6 @@ function Page() {
   const [lastName, setLastName] = useState("");
   const [textEmail, setTextEmail] = useState("");
   const [textMessage, setTextMessage] = useState("");
-  const [tele, setTele] = useState("");
 
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
@@ -35,7 +34,9 @@ function Page() {
       const url = `
       https://api.telegram.org/bot5951822431:AAEFoaPj1Ayy1AbZUET0Kbr_HML6HWu-WuY/sendMessage?chat_id=5113505799&text=Name:${firstName} ${lastName}%0AEmail:${textEmail}%0AMessage:${textMessage}
       `;
-      setTele(url);
+      fetch(url,{
+        method:"POST"
+      })
       alert("Successfully");
     }
   };
@@ -60,7 +61,7 @@ function Page() {
       <a
         onClick={handleTeleClick}
         className={styles.formBtn}
-        href={tele}
+        href={"#"}
         target="_blank"
         style={{ pointerEvents: isAnyInputEmpty ? "none" : "auto" }}
       >
