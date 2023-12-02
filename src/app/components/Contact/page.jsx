@@ -27,7 +27,8 @@ function Page() {
   const isAnyInputEmpty =
     !firstName.trim() || !lastName.trim() || !textEmail.trim() || !textMessage.trim();
 
-  const handleTeleClick = () => {
+  const handleTeleClick = (event) => {
+    event.preventDefault()
     if (isAnyInputEmpty) {
       alert("Inputs are empty");
     } else {
