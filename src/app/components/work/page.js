@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Suspense, lazy } from "react";
-import styles from "./work.module.css";
+import styles from "./work.module.css"; 
 const WorkCards = lazy(() => import("./workCards"));
 function page() {
   return (
@@ -90,6 +90,13 @@ function page() {
           imgLink="https://i.ibb.co/vZG70dN/scanner2-portrait.png"
           url="https://github.com/hamdymohamedak/scannerApp"
           title="QrCode Scanner App"
+        />
+      </Suspense>
+      <Suspense fallback={<div className={styles.loading}></div>}>
+        <WorkCards
+          imgLink="https://i.ibb.co/fCTGP5Y/Mockup.png"
+          url="https://elmaram.vercel.app/"
+          title="Elmaram Pharmacy"
         />
       </Suspense>
     </section>
