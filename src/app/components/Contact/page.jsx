@@ -33,7 +33,7 @@ function Page() {
       alert("Inputs are empty");
     } else {
       const url = `
-      https://api.telegram.org/bot5951822431:AAEFoaPj1Ayy1AbZUET0Kbr_HML6HWu-WuY/sendMessage?chat_id=5113505799&text=Portfolio\n  Name:${firstName} ${lastName}%0AEmail:${textEmail}%0AMessage:${textMessage}
+      https://api.telegram.org/bot5951822431:AAEFoaPj1Ayy1AbZUET0Kbr_HML6HWu-WuY/sendMessage?chat_id=5113505799&text=Portfolio\n:  Name:${firstName} ${lastName}%0AEmail:${textEmail}%0AMessage:${textMessage}
       `;
       fetch(url,{
         method:"POST"
