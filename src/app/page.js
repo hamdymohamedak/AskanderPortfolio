@@ -1,5 +1,4 @@
 // import Home from "./components/home/page";
-import { Suspense } from "react";
 import dynamic from "next/dynamic";
 let Homepage = dynamic(() => import("./components/home/page"), {
   ssr: false,
@@ -33,30 +32,13 @@ let Loading = dynamic(() => import("./loading/loading"), {
 export default function Home() {
   return (
     <>
-      <Suspense fallback={<Loading />}>
         <Navbar />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
         <Homepage />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
         <AboutPage />
-      </Suspense>
-
-      <Suspense fallback={<Loading />}>
         <InfoPage />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
         <Work />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
         <Contact />
-      </Suspense>
-      <Suspense fallback={<Loading />}>
         <Footer />
-      </Suspense>
     </>
   );
 }
