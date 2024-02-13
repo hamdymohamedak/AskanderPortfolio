@@ -8,11 +8,6 @@ export const metadata = {
   description:
     "Welcome to Askander's portfolio. Explore my web and mobile development projects and skills.",
 };
-
-export const metaVerification = {
-  name: "google-site-verification",
-  content: "aVqvQ1w3xxZHIxtG2sBMaOBi8OzN1A77jdsIJk7eCSs",
-};
 export const metaRobots = {
   name: "robots",
   content: "index, follow",

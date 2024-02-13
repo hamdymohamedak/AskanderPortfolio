@@ -3,9 +3,8 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./home.module.css";
 import HomeImg from "../../LogoWithoutBg.svg";
-import Link from "next/link";
-import Head from "next/head";
-const Cards = lazy(() => import("../cards/page"));
+// const Cards = lazy(() => import("../cards/page"));
+import Cards from "../cards/page";
 const Button = lazy(() => import("../btn/btn"));
 
 function Home() {

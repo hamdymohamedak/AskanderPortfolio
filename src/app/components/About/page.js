@@ -41,6 +41,10 @@ const cardData = [
     title: "React Native",
     info: "React Native simplifies cross-platform mobile app development using JavaScript and React.",
   },
+  {
+    title: "Tauri rs",
+    info: "crossplatform Framework for build a Desktop apps with Rust at the backend and JS at the front end.",
+  },
 ];
 
 function Btn() {
@@ -58,4 +62,4 @@ function Btn() {
   );
 }
 
-export default React.memo(Btn);
+export default Btn;
