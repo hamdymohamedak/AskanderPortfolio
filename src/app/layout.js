@@ -6,7 +6,7 @@ import Head from "next/head";
 export const metadata = {
   title: "Askander",
   description:
-    "Welcome to Askander's portfolio. Explore my web and mobile development projects and skills.",
+    "Welcome to Askander portfolio. Explore my web and mobile development projects and skills.",
 };
 export const metaRobots = {
   name: "robots",
